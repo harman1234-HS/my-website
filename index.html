@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+header {
+  background-color: #222;
+  color: white;
+  padding: 30px;
+}
+
+section {
+  background-color: white;
+  margin: 20px;
+  padding: 25px;
+  border-radius: 15px;
+}
+
+.service, .price {
+  background-color: #eeeeee;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.price h3 {
+  color: blue;
+  font-size: 24px;
+}
+
+button {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+#message {
+  font-weight: bold;
+  margin-top: 15px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Premjit Web Services</h1>
+
+<p>Simple & Professional Websites</p>
+
+</header>
+
+<section>
+
+<h2>Our Services</h2>
+
+<div class="service">
+<h3>Website Design</h3>
+<p>Simple aur attractive websites.</p>
+</div>
+
+<div class="service">
+<h3>Business Website</h3>
+<p>Small business ke liye website.</p>
+</div>
+
+<div class="service">
+<h3>Portfolio Website</h3>
+<p>Apne skills aur projects dikhane ke liye.</p>
+</div>
+
+</section>
+
+<section>
+
+<h2>Pricing 💰</h2>
+
+<div class="price">
+<h3>Basic</h3>
+<p>₹499</p>
+<p>1 Simple Page</p>
+<button onclick="choosePlan('Basic')">Choose</button>
+</div>
+
+<div class="price">
+<h3>Standard</h3>
+<p>₹999</p>
+<p>3 Website Sections</p>
+<button onclick="choosePlan('Standard')">Choose</button>
+</div>
+
+<div class="price">
+<h3>Premium</h3>
+<p>₹1499</p>
+<p>Complete Business Website</p>
+<button onclick="choosePlan('Premium')">Choose</button>
+</div>
+
+<p id="message"></p>
+
+</section>
+
+<script>
+
+function choosePlan(plan) {
+
+  document.getElementById("message").innerHTML =
+    "You selected: " + plan + " Plan ✅";
+
+}
+
+</script>
+
+</body>
+</html>
