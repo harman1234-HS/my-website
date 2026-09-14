@@ -90,7 +90,19 @@ button {
 }
 
 @media (max-width: 600px) {
+.dark-mode {
+  background-color: #111;
+  color: white;
+}
 
+.dark-mode section {
+  background-color: #222;
+}
+
+.dark-mode .service,
+.dark-mode .price {
+  background-color: #333;
+  }
   nav a {
     display: inline-block;
     margin: 6px 4px;
@@ -123,7 +135,7 @@ button {
 <a href="#services">Services</a>
 <a href="#pricing">Pricing</a>
 <a href="#contact">Contact</a>
-
+<button onclick="toggleMode()">🌙 Dark Mode</button>
 </nav>
 
 <header id="home">
@@ -211,7 +223,7 @@ professional websites banata hoon.
 </section>
 
 <script>
-
+  
 function choosePlan(plan) {
 
   document.getElementById("message").innerHTML =
@@ -220,7 +232,9 @@ function choosePlan(plan) {
 }
 
 function sendMessage() {
-
+function toggleMode() {
+  document.body.classList.toggle("dark-mode");
+  }
   let name = document.getElementById("name").value;
 
   if (name === "") {
